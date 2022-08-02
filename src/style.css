@@ -38,6 +38,7 @@ header{
     align-items: center;
     gap: 20px;
     font-size: 70px;
+    text-transform: capitalize;
 }
 .navitem{
     height: 100%;
