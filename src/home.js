@@ -7,6 +7,8 @@ export default function createHomepage(){
     
     const home = document.createElement('div');
     home.classList.add('content-home');
+    home.classList.add('content-default');
+    
 
     const h1 = document.createElement('h1');
     h1.textContent = 'Welcome to the Bannered Mare!';

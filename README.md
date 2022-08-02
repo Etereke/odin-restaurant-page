@@ -1,1 +1,2 @@
 # odin-restaurant-page
+Exercise made for [The Odin Project](https://www.theodinproject.com/lessons/node-path-javascript-restaurant-page). The main theme was the use of webpack, and implementing it purely using DOM manipulation from JavaScript.

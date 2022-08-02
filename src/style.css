@@ -4,7 +4,7 @@
 }
 
 :root{
-    --content-opaque: rgba(0, 0, 0, 0.788);
+    --content-opaque: rgba(0, 0, 0, 0.904);
     --border-gray: rgb(82, 82, 82);
 }
 
@@ -21,12 +21,12 @@ body{
     grid-template-columns: 1fr 8fr 1fr;
     gap: 10px;
     background-image: url('./skyrim-logo.jpg');
-    background-size: cover;
+    background-size:contain;
     font-family: skyrim, sans-serif;
     color: white;
 }
 
-header, footer, .content-home{
+header, footer, .content-default{
     border: 3px solid var(--border-gray);
     background-color: var(--content-opaque);
 }
@@ -44,6 +44,7 @@ header{
     height: 100%;
     display: flex;
     padding: 0 10px;
+    cursor: pointer;
 }
 .navitem > span{
     align-self: center;
@@ -61,16 +62,17 @@ footer{
     justify-content: center;
     align-items: center;
 }
-.content-home{
-    
-    background-color: var(--content-opaque);
+.content-default{
     grid-column: 2 / 3;
+    padding: 40px;
+}
+.content-home{
     display: grid;
     grid-template-rows: 100px 1fr 1fr;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     justify-items: center;
-    padding: 40px;
+    
 }
 
 .content-home > h1{
@@ -86,4 +88,83 @@ footer{
     max-width: min(80%, 600px);
     border: 3px solid var(--border-gray);
     border-radius: 20px;
+}
+
+.content-menu{
+    /* display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px; */
+    font-size: 3rem;
+}
+
+.menu-row{
+    padding: 0;
+    overflow-x: hidden;
+    /* display: grid;
+    grid-template-columns: 1fr 1fr; */
+}
+
+.menu-row > span:first-child{
+    padding-right: 0.33em;
+    background-color: black;
+    /* justify-self: end; */
+}
+
+.menu-row > span:last-child{
+    /* justify-self: end; */
+    float: right;
+    padding-left: 0.33em;
+    background-color: black;
+}
+
+.menu-row:before {
+    float: left;
+    width: 0;
+    white-space: nowrap;
+    content:
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+ ". . . . . . . . . . . . . . . . . . . . "
+}
+
+.content-contact{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-size: 3rem;
+}
+.content-contact > h1{
+    justify-self: center;
+}
+.content-contact > img{
+    border: 3px solid var(--border-gray);
+    border-width: 5px;
+    border-radius: 20px;
+    width: 500px;
+    justify-self: center;
+}
+
+.info{
+    display: grid;
+    grid-template-columns: 1fr;
+}
+
+.content-contact > h1 {
+    grid-column: 1 / 3;
 }
