@@ -1,0 +1,88 @@
+@font-face{
+    font-family: skyrim;
+    src: url('./DarsSkyrim.ttf');
+}
+
+:root{
+    --content-opaque: rgba(0, 0, 0, 0.788);
+    --border-gray: rgb(82, 82, 82);
+}
+
+body{
+    padding: 0;
+    margin: 0;
+}
+
+#content{
+    min-height: 100vh;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: 100px 1fr 50px ;
+    grid-template-columns: 1fr 8fr 1fr;
+    gap: 10px;
+    background-image: url('./skyrim-logo.jpg');
+    background-size: cover;
+    font-family: skyrim, sans-serif;
+    color: white;
+}
+
+header, footer, .content-home{
+    border: 3px solid var(--border-gray);
+    background-color: var(--content-opaque);
+}
+header{
+    grid-column: 1 / 4;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 70px;
+}
+.navitem{
+    height: 100%;
+    display: flex;
+    padding: 0 10px;
+}
+.navitem > span{
+    align-self: center;
+}
+.navitem:hover{
+    color: rgb(231, 166, 25);
+}
+.active{
+    background-color: rgba(161, 20, 20, 0.39);
+}
+footer{
+    grid-row: 3 / 4;
+    grid-column: 1 / 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.content-home{
+    
+    background-color: var(--content-opaque);
+    grid-column: 2 / 3;
+    display: grid;
+    grid-template-rows: 100px 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    justify-items: center;
+    padding: 40px;
+}
+
+.content-home > h1{
+    grid-column: 1 / 3;
+    text-align: center;
+}
+
+.paragraph{
+    font-size: 2rem;
+}
+
+.content-home img{
+    max-width: min(80%, 600px);
+    border: 3px solid var(--border-gray);
+    border-radius: 20px;
+}
